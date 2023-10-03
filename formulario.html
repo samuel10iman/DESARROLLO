@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario de Registro</title>
+	<link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+	<div class="grid-container">
+		
+        <div class="grid-item2">
+			<h1>Formulario de Registro</h1>
+			<form action="procesa_form.php" method="post">
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre" required><br><br>
+
+				<label for="apellidos">Apellidos:</label>
+				<input type="text" id="apellidos" name="apellidos" required><br><br>
+
+				<label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+				<input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+
+				<label for="ocupacion">Ocupacion:</label>
+				<input type="text" id="ocupacion" name="ocupacion" required><br><br>
+
+				<label for="telefono">Telefono:</label>
+				<input type="text" id="telefono" name="telefono" required><br><br>
+
+				<label for="correo">Correo:</label>
+				<input type="text" id="correo" name="correo" required><br><br>
+
+				<label for="nacionalidad">Nacionalidad:</label>
+				<select id="nacionalidad" name="nacionalidad" required>
+					<option value="">-- Seleccione su nacionalidad --</option>
+					<option value="mx">Mexico</option>
+					<option value="us">Estados Unidos</option>
+					<option value="ca">Peru</option>
+					<option value="ar">Argentina</option>
+					<option value="cl">Chile</option>
+				</select><br><br>
+
+				<label for="nivel_ingles">Nivel de Ingles:</label><br><br>
+				<input type="radio" id="basico" name="nivel_ingles" value="basico" required>
+				<label for="basico">Basico</label><br>
+				<input type="radio" id="intermedio" name="nivel_ingles" value="intermedio">
+				<label for="intermedio">Intermedio</label><br>
+				<input type="radio" id="avanzado" name="nivel_ingles" value="avanzado">
+				<label for="avanzado">Avanzado</label><br><br>
+
+				<label for="lenguajes">Lenguaje de Programación:</label><br><br>
+				<select id="lenguajes" name="lenguajes[]" multiple>
+					<option value="python">Python</option>
+					<option value="javascript">JavaScript</option>
+					<option value="php">PHP</option>
+					<option value="java">Java</option>
+					<option value="ruby">Ruby</option>
+				</select><br>
+
+				<label for="aptitudes">Aptitudes:</label><br><br>
+				<input type="text" id="aptitudes" name="aptitudes" list="habilidades" required>
+				<datalist id="habilidades">
+					<option value="Trabajo en equipo">
+					<option value="Comunicacion">
+					<option value="Resolucion de problemas">
+					<option value="Creatividad">
+					<option value="Liderazgo">
+				</datalist><br><br>
+				<label for="habilidades">Habilidades:</label><br>
+				<input type="checkbox" id="habilidades1" name="habilidades[]" value="Trabajo en equipo">
+				<label for="habilidades1">Trabajo en equipo</label><br>
+				<input type="checkbox" id="habilidades2" name="habilidades[]" value="Comunicación">
+				<label for="habilidades2">Comunicacion</label><br>
+				<input type="checkbox" id="habilidades3" name="habilidades[]" value="Resolución de problemas">
+				<label for="habilidades3">Resolucion de problemas</label><br>
+				<input type="checkbox" id="habilidades4" name="habilidades[]" value="Creatividad">
+				<label for="habilidades4">Creatividad</label><br>
+				<input type="checkbox" id="habilidades5" name="habilidades[]" value="Liderazgo">
+				<label for="habilidades5">Liderazgo</label><br><br>
+
+				<label for="perfil">Perfil:</label><br><br>
+				<textarea id="perfil" name="perfil" rows="5" cols="40" required></textarea><br><br>
+
+				<label for="formacion">Formacion:</label><br><br>
+				<textarea id="formacion" name="formacion" rows="5" cols="40" required></textarea><br><br>
+
+				<label for="experiencia">Experiencia:</label><br><br>
+				<textarea id="experiencia" name="experiencia" rows="5" cols="40" required></textarea><br><br>
+
+				<input type="submit" value="Enviar">
+			</form>
+		</div>
+		
+	</div>
+</body>
+</html>
