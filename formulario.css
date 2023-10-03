@@ -1,0 +1,36 @@
+.grid-container {
+    display:grid;
+        grid-template-areas: 
+        "area2";
+}
+.grid-item1{
+    background: rgb(196, 52, 52);
+    text-align: center;
+    grid-area: area1;
+    padding-top: 25px;
+}
+
+.grid-item2{
+    background: rgb(88, 88, 88);
+    text-align: center;
+    grid-area: area2;
+    color: white;
+    line-height: 0.5;
+    padding-top: 5px;
+}
+
+.grid-item3{
+    background: whitesmoke;
+    text-align: left;
+    grid-area: area3;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.grid-item4{
+    background: white;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    grid-area: area4;
+}
