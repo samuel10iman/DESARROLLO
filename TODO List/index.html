@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-do List</title>
+    <style>
+        body {
+    background-color:cornflowerblue;
+    align-self: center;    
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  h1 {
+    color: beige;
+  }
+
+  input[type="text"] {
+    border-radius: 60px;
+    color:cornflowerblue;
+    background-color: beige;
+    border: none;
+    width: 300px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  button {
+    border-radius: 60px;
+    border: none;
+    background-color: beige;
+    color: cornflowerblue;
+    padding: 5px 10px;
+  }
+   
+  li{
+    color: beige;
+  }
+    </style>
+</head>
+<body>
+    <h1>TO-DO LIST</h1>
+    <form action="/" method="POST">
+        <input type="text" name="task" placeholder="Añade una tarea" required>
+        <button type="submit">+</button>
+    </form>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                <input type="checkbox" id="{{ loop.index }}" name="task " value="{{ task }}" onclick="tacharTarea(this)">
+                <label for="{{ loop.index }}">{{ task }}</label>
+                <form action="/delete" method="POST" style="display: inline;">
+                    <input type="hidden" name="task" value="{{ task }}">
+                    <button type="submit">x</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    <script>
+        function tacharTarea(checkbox) {
+        var label = checkbox.nextElementSibling;
+        if (checkbox.checked) {
+            label.style.textDecoration = 'line-through';
+        } else {
+            label.style.textDecoration = 'none';
+        }
+    }
+    </script>
+</body>
+</html>
